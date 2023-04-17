@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -40,16 +41,8 @@ class beginnerfriendly extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: Text(
-                              'Beginner friendly',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 30,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            child: Text('Beginner friendly',
+                                style: titlecustomTextStyle()),
                           )
                         ],
                       ),
@@ -73,13 +66,8 @@ class beginnerfriendly extends StatelessWidget {
                           Center(
                             child: Text(
                               'By choosing healthy over\nskinny you are choosing\nself-love over\nself-judgement',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 23,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: midlecustomTextStyle(),
+                              textAlign: TextAlign.center,
                             ),
                             /* style: TextStyle(
                                 fontStyle: ,

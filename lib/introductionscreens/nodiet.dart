@@ -6,6 +6,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../constants/custom_text_style.dart';
+
 class nodietscreen extends StatelessWidget {
   const nodietscreen({super.key});
 
@@ -42,24 +44,14 @@ class nodietscreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: Text(
-                              'No Diet',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 30,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.w900),
-                            ),
+                            child:
+                                Text('No Diet', style: titlecustomTextStyle()),
                           )
                         ],
                       ),
                     ),
                     // hello
-
-
-                    // venki    babu 
+                    // venki    babu
                     //login screen header
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
@@ -78,19 +70,9 @@ class nodietscreen extends StatelessWidget {
                           Center(
                             child: Text(
                               'No Calories restrictions.you \ncan eat what ever you\nwant when you are\nnot fasting',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: midlecustomTextStyle(),
+                              textAlign: TextAlign.center,
                             ),
-                            /* style: TextStyle(
-                                fontStyle: ,
-                                  fontSize: 15,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),*/
                           )
                         ],
                       ),

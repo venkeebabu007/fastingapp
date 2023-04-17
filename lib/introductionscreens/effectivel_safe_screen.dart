@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -40,16 +41,8 @@ class effectiveandsafe extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: Text(
-                              'Effective & Safe',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 30,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            child: Text('Effective & Safe',
+                                style: titlecustomTextStyle()),
                           )
                         ],
                       ),
@@ -73,19 +66,9 @@ class effectiveandsafe extends StatelessWidget {
                           Center(
                             child: Text(
                               'Some research suggest that\nit may have benefits beyond\nweight loss,like improved\nbrain and heart health.',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 23,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: midlecustomTextStyle(),
+                              textAlign: TextAlign.center,
                             ),
-                            /* style: TextStyle(
-                                fontStyle: ,
-                                  fontSize: 15,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),*/
                           )
                         ],
                       ),
