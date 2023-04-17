@@ -56,10 +56,7 @@ class nodietscreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // hello
-
-
-                    // venki    babu 
+                    // hello venki Babu
                     //login screen header
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
