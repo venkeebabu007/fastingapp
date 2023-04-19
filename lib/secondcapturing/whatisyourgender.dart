@@ -28,226 +28,237 @@ class whatisyourgender extends StatelessWidget {
                 minHeight: cons.maxHeight,
               ),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
+                child: InkWell(
+                  onTap: () {
+                    Get.to(howoldareyou());
+                  },
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
 
-                    //login screen header
+                      //login screen header
 
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          top: 50, left: 20, right: 20, bottom: 50),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'What is your gender ?',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 50, left: 20, right: 20, bottom: 50),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                              child: Text(
+                                'What is your gender ?',
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 22,
+                                  fontStyle: FontStyle.italic,
+                                  fontFamily: 'Segoe UI Italic',
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 50, bottom: 10),
+                            child: Container(
+                              width: 300,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.blue, width: 4),
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 28,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.male,
+                                      size: 30,
+                                      color: Colors.blue,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Male",
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 25,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                          )
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
+                            child: Container(
+                              width: 300,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.pink, width: 4),
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 28,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.female,
+                                      size: 30,
+                                      color: Colors.pink,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Female",
+                                      style: TextStyle(
+                                        color: Colors.pink,
+                                        fontSize: 25,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
+                            child: Container(
+                              width: 300,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.green, width: 4),
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 28,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 35,
+                                      width: 30,
+                                      child: Stack(children: [
+                                        Icon(
+                                          Icons.female,
+                                          size: 30,
+                                          color: Colors.pink,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              bottom: 140, left: 10),
+                                          child: Icon(
+                                            Icons.male,
+                                            size: 30,
+                                            color: Colors.blue,
+                                          ),
+                                        ),
+                                      ]),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Others",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 25,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                    ),
 
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 50, bottom: 10),
+                      //
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 180, left: 20, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(howoldareyou());
+                          },
                           child: Container(
-                            width: 300,
+                            width: 240,
                             decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.blue, width: 4),
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 28,
-                              ),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.male,
-                                    size: 30,
-                                    color: Colors.blue,
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Male",
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontSize: 25,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                              gradient: LinearGradient(colors: [
+                                Color.fromARGB(255, 17, 108, 20),
+                                Colors.green,
+                                Color.fromARGB(255, 17, 108, 20),
+                              ]),
+                              borderRadius: BorderRadius.circular(25),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10),
-                          child: Container(
-                            width: 300,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.pink, width: 4),
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 28,
-                              ),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.female,
-                                    size: 30,
-                                    color: Colors.pink,
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Next",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Female",
-                                    style: TextStyle(
-                                      color: Colors.pink,
-                                      fontSize: 25,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10),
-                          child: Container(
-                            width: 300,
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.green, width: 4),
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 28,
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    child: Stack(children: [
-                                      Icon(
-                                        Icons.female,
-                                        size: 30,
-                                        color: Colors.pink,
-                                      ),
-                                      Icon(
-                                        Icons.male,
-                                        size: 30,
-                                        color: Colors.blue,
-                                      ),
-                                    ]),
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Others",
-                                    style: TextStyle(
-                                      color: Colors.green,
-                                      fontSize: 25,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    //
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(top: 180, left: 20, right: 20),
-                      child: InkWell(
-                        onTap: () {
-                          Get.to(howoldareyou());
-                        },
-                        child: Container(
-                          width: 240,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Color.fromARGB(255, 17, 108, 20),
-                              Colors.green,
-                              Color.fromARGB(255, 17, 108, 20),
-                            ]),
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "Next",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: Container(
-                        // width: 240,
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Container(
+                          // width: 240,
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
 
-                        // Border.all(color: Colors.green, width: 4),
-                        child: InkWell(
-                          /* onTap: () {
-                                            if (formKey.currentState!
-                                                .validate()) {
-                                            //  loginUserNow();
-                                            }
-                                          },*/
-                          borderRadius: BorderRadius.circular(30),
-                          customBorder:
-                              Border.all(color: Colors.green, width: 4),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 28,
-                            ),
-                            child: Text(
-                              "Skip",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 17, 108, 20),
-                                fontSize: 20,
+                          // Border.all(color: Colors.green, width: 4),
+                          child: InkWell(
+                            /* onTap: () {
+                                              if (formKey.currentState!
+                                                  .validate()) {
+                                              //  loginUserNow();
+                                              }
+                                            },*/
+                            borderRadius: BorderRadius.circular(30),
+                            customBorder:
+                                Border.all(color: Colors.green, width: 4),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 10,
+                                horizontal: 28,
+                              ),
+                              child: Text(
+                                "Skip",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 17, 108, 20),
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );

@@ -48,7 +48,7 @@ class listofintroductionscreens extends StatelessWidget {
       showSkipButton: false,
       showNextButton: false,
       // dotsContainerDecorator: BoxDecoration(color: Colors.red),
-      controlsPadding: EdgeInsets.only(bottom: height * 0.25),
+      controlsPadding: EdgeInsets.only(bottom: height * 0.2),
     ));
   }
 }

@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ class wearemakingyourplan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -43,13 +45,7 @@ class wearemakingyourplan extends StatelessWidget {
                           Center(
                             child: Text(
                               'We are making your plan',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 30,
-                                  fontStyle: FontStyle.italic,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: titlecustomTextStyle(),
                             ),
                           )
                         ],
@@ -59,7 +55,7 @@ class wearemakingyourplan extends StatelessWidget {
                     //login screen header
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      height: 250,
+                      height: height * 0.5,
                       child: Image.asset(
                         "assets/images/Group 1572.png",
                       ),

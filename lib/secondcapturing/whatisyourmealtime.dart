@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/anyhealthproblem.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/targetweight.dart';
@@ -56,13 +57,7 @@ class _whatismealtimeState extends State<whatismealtime> {
                           Center(
                             child: Text(
                               'What is your meal time',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: titlecustomTextStyle(),
                             ),
                           )
                         ],

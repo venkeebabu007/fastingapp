@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/whatisyourheight.dart';
 import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
@@ -52,13 +53,7 @@ class _howoldareyouState extends State<howoldareyou> {
                           Center(
                             child: Text(
                               'How old are you ?',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: titlecustomTextStyle(),
                             ),
                           )
                         ],
@@ -132,14 +127,7 @@ class _howoldareyouState extends State<howoldareyou> {
                           borderRadius: BorderRadius.circular(15),
                         ),
 
-                        // Border.all(color: Colors.green, width: 4),
                         child: InkWell(
-                          /* onTap: () {
-                                            if (formKey.currentState!
-                                                .validate()) {
-                                            //  loginUserNow();
-                                            }
-                                          },*/
                           borderRadius: BorderRadius.circular(30),
                           customBorder:
                               Border.all(color: Colors.green, width: 4),

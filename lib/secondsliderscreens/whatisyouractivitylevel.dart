@@ -43,7 +43,7 @@ class whatisyouractivitylevel extends StatelessWidget {
                         children: [
                           Center(
                             child: Text(
-                              'What\'your activity level ?',
+                              'What\'s your activity level ?',
                               style: GoogleFonts.lato(
                                   textStyle:
                                       Theme.of(context).textTheme.displayMedium,

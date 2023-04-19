@@ -30,22 +30,27 @@ class nodietscreen extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: 20,
-                    ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                        top: 50,
+                      padding: EdgeInsets.only(
+                        top: height * 0.05,
                         left: 20,
                         right: 20,
-                        bottom: 30,
+                        bottom: height * 0.05,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child:
-                                Text('No Diet', style: titlecustomTextStyle()),
+                            child: Text(
+                              'No Diet',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 6, 119, 10),
+                                fontWeight: FontWeight.w900,
+                                fontSize: 33,
+                                fontStyle: FontStyle.italic,
+                                fontFamily: 'Segoe UI Italic',
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -69,7 +74,7 @@ class nodietscreen extends StatelessWidget {
                         children: [
                           Center(
                             child: Text(
-                              'No Calories restrictions.you \ncan eat what ever you\nwant when you are\nnot fasting',
+                              'No Calories restrictions.you \ncan eat whatever you\nwant when you are\nnot fasting',
                               style: midlecustomTextStyle(),
                               textAlign: TextAlign.center,
                             ),
@@ -84,7 +89,7 @@ class nodietscreen extends StatelessWidget {
                       },
                       child: Padding(
                         padding: EdgeInsets.only(
-                            top: height * 0.1, left: 20, right: 20),
+                            top: height * 0.16, left: 20, right: 20),
                         child: Container(
                           width: 240,
                           decoration: BoxDecoration(
@@ -138,7 +143,7 @@ class nodietscreen extends StatelessWidget {
                               horizontal: 28,
                             ),
                             child: Text(
-                              "already have an acount?",
+                              "Already have an account?",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 17, 108, 20),
                                 fontSize: 20,

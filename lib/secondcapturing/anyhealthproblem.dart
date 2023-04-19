@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/wearemakingyourplan.dart';
 import 'package:fastingapp/secondcapturing/whatisyourmealtime.dart';
@@ -36,200 +37,199 @@ class _anyhealthproblemState extends State<anyhealthproblem> {
                 minHeight: cons.maxHeight,
               ),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-
-                    //login screen header
-
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 50,
-                        left: 20,
-                        right: 20,
+                child: InkWell(
+                  onTap: () {
+                    Get.to(wearemakingyourplan());
+                  },
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'Any health problems? ',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(top: 30),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "I don't have any issue",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "Diabetis",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "Heart diseases",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "Blood pressure",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "Anxiety & Stress",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 50,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 11, 72, 13)),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Center(
-                                child: Text(
-                                  "Depression",
-                                  style: TextStyle(
-                                      fontStyle: FontStyle.normal,
-                                      color: Color.fromARGB(255, 11, 72, 13),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    //
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(top: 80, left: 20, right: 20),
-                      child: InkWell(
-                        onTap: () {
-                          Get.to(wearemakingyourplan());
-                        },
-                        child: Container(
-                          width: 240,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Color.fromARGB(255, 17, 108, 20),
-                              Colors.green,
-                              Color.fromARGB(255, 17, 108, 20),
-                            ]),
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                      //login screen header
+
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 50,
+                          left: 20,
+                          right: 20,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
                               child: Text(
-                                "Creat my plan",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
+                                'Any health problems? ',
+                                style: titlecustomTextStyle(),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(top: 30),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "I don't have any issue",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "Diabetes",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "Heart disease",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "Blood pressure",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "Anxiety & Stress",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 11, 72, 13)),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Center(
+                                  child: Text(
+                                    "Depression",
+                                    style: TextStyle(
+                                        fontStyle: FontStyle.normal,
+                                        color: Color.fromARGB(255, 11, 72, 13),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      //
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 80, left: 20, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(wearemakingyourplan());
+                          },
+                          child: Container(
+                            width: 240,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color.fromARGB(255, 17, 108, 20),
+                                Colors.green,
+                                Color.fromARGB(255, 17, 108, 20),
+                              ]),
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Create my plan",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );

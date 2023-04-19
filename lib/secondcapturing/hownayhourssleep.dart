@@ -28,243 +28,248 @@ class howmanyhourssleep extends StatelessWidget {
                 minHeight: cons.maxHeight,
               ),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
+                child: InkWell(
+                  onTap: () {
+                    Get.to(whatisyourgender());
+                  },
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
 
-                    //login screen header
+                      //login screen header
 
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          top: 50, left: 20, right: 20, bottom: 50),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'At what time do you sleep ?',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 50, left: 5, right: 5, bottom: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                              child: Text(
+                                'How many hours do you sleep?',
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 22,
+                                  fontStyle: FontStyle.italic,
+                                  fontFamily: 'Segoe UI Italic',
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: 200,
+                        child: Image.asset(
+                          "assets/images/Group 2839.png",
+                        ),
+                      ),
+
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 10),
+                            child: Container(
+                              width: 230,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 29, 100, 31),
+                                      width: 3),
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 10,
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Over 9 hours",
+                                      style: TextStyle(
+                                        color: Color.fromARGB(255, 29, 100, 31),
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                          )
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5, bottom: 10),
+                            child: Container(
+                              width: 230,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 29, 100, 31),
+                                      width: 3),
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 10,
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "7 - 9 Hours",
+                                      style: TextStyle(
+                                        color: Color.fromARGB(255, 29, 100, 31),
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5, bottom: 10),
+                            child: Container(
+                              width: 230,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 29, 100, 31),
+                                      width: 3),
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 10,
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "5 - 6 Hours",
+                                      style: TextStyle(
+                                        color: Color.fromARGB(255, 29, 100, 31),
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5, bottom: 10),
+                            child: Container(
+                              width: 230,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 29, 100, 31),
+                                      width: 3),
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 10,
+                                  horizontal: 10,
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Less than 5 hours",
+                                      style: TextStyle(
+                                        color: Color.fromARGB(255, 29, 100, 31),
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      height: 200,
-                      child: Image.asset(
-                        "assets/images/Group 2839.png",
-                      ),
-                    ),
 
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20, bottom: 10),
+                      //
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 20, left: 20, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(whatisyourgender());
+                          },
                           child: Container(
-                            width: 230,
+                            width: 240,
                             decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 29, 100, 31),
-                                    width: 3),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 10,
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Over 9 hours",
-                                    style: TextStyle(
-                                      color: Color.fromARGB(255, 29, 100, 31),
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                              gradient: LinearGradient(colors: [
+                                Color.fromARGB(255, 17, 108, 20),
+                                Colors.green,
+                                Color.fromARGB(255, 17, 108, 20),
+                              ]),
+                              borderRadius: BorderRadius.circular(25),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 10),
-                          child: Container(
-                            width: 230,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 29, 100, 31),
-                                    width: 3),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 10,
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 20,
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Next",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
                                   ),
-                                  Text(
-                                    "7 - 9 Hours",
-                                    style: TextStyle(
-                                      color: Color.fromARGB(255, 29, 100, 31),
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 10),
-                          child: Container(
-                            width: 230,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 29, 100, 31),
-                                    width: 3),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 10,
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "5 - 7 Hours",
-                                    style: TextStyle(
-                                      color: Color.fromARGB(255, 29, 100, 31),
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 10),
-                          child: Container(
-                            width: 230,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 29, 100, 31),
-                                    width: 3),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10,
-                                horizontal: 10,
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "Less than 5 hours",
-                                    style: TextStyle(
-                                      color: Color.fromARGB(255, 29, 100, 31),
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    //
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(top: 40, left: 20, right: 20),
-                      child: InkWell(
-                        onTap: () {
-                          Get.to(whatisyourgender());
-                        },
-                        child: Container(
-                          width: 240,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Color.fromARGB(255, 17, 108, 20),
-                              Colors.green,
-                              Color.fromARGB(255, 17, 108, 20),
-                            ]),
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "Next",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: Container(
-                        // width: 240,
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Container(
+                          // width: 240,
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
 
-                        // Border.all(color: Colors.green, width: 4),
-                        child: InkWell(
-                          /* onTap: () {
-                                            if (formKey.currentState!
-                                                .validate()) {
-                                            //  loginUserNow();
-                                            }
-                                          },*/
-                          borderRadius: BorderRadius.circular(30),
-                          customBorder:
-                              Border.all(color: Colors.green, width: 4),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 10,
-                              horizontal: 28,
-                            ),
-                            child: Text(
-                              "Skip",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 17, 108, 20),
-                                fontSize: 20,
+                          // Border.all(color: Colors.green, width: 4),
+                          child: InkWell(
+                            /* onTap: () {
+                                              if (formKey.currentState!
+                                                  .validate()) {
+                                              //  loginUserNow();
+                                              }
+                                            },*/
+                            borderRadius: BorderRadius.circular(30),
+                            customBorder:
+                                Border.all(color: Colors.green, width: 4),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 10,
+                                horizontal: 28,
+                              ),
+                              child: Text(
+                                "Skip",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 17, 108, 20),
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );

@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/yourcurrentweight.dart';
 import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
@@ -51,14 +52,8 @@ class _whatisyourheightState extends State<whatisyourheight> {
                         children: [
                           Center(
                             child: Text(
-                              'what is your height?',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              'What is your height?',
+                              style: titlecustomTextStyle(),
                             ),
                           )
                         ],
@@ -66,19 +61,24 @@ class _whatisyourheightState extends State<whatisyourheight> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 50),
+                      padding: EdgeInsets.only(top: height * 0.26),
                       child: Column(
                         children: <Widget>[
                           Container(
                               // height: 200,
                               child: Center(
-                            child: Text(
-                              '180.0 cm',
-                              style: TextStyle(
-                                  fontSize: 40,
-                                  color: Color.fromARGB(255, 19, 118, 22),
-                                  decoration: TextDecoration.underline,
-                                  fontWeight: FontWeight.w700),
+                            child: TextField(
+                              style: TextStyle(height: 2.5),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: '180 cm',
+                                hintStyle: TextStyle(
+                                    fontSize: 40,
+                                    color: Color.fromARGB(255, 19, 118, 22),
+                                    decoration: TextDecoration.underline,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              textAlign: TextAlign.center,
                             ),
                           )),
                           Container(
@@ -128,8 +128,8 @@ class _whatisyourheightState extends State<whatisyourheight> {
 
                     //
                     Padding(
-                      padding:
-                          const EdgeInsets.only(top: 280, left: 20, right: 20),
+                      padding: EdgeInsets.only(
+                          top: height * 0.2, left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
                           Get.to(yourcurrentweight());

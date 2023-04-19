@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/userdetailscapturingscreens/haveyouever.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -43,101 +44,108 @@ class tellusyourgoal extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: Text(
-                              'What is your goal\nfor fasting',
-                              style: GoogleFonts.adventPro(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 30,
-                                  fontStyle: FontStyle.italic,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            child: Text('What is your goal?',
+                                style: titlecustomTextStyle()),
                           )
                         ],
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          height: height * 0.14,
-                          width: width * 0.3,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/Group 1280.png"),
-                                  fit: BoxFit.fill)),
-                          //color: Colors.blue,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15),
-                          child: Container(
-                            margin: EdgeInsets.all(10),
-                            height: height * 0.15,
-                            width: width * 0.28,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Group 1281.png"),
-                                    fit: BoxFit.fill)),
-                            //color: Colors.blue,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          height: height * 0.14,
-                          width: width * 0.3,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/Group 1282.png"),
-                                  fit: BoxFit.fill)),
-                          //color: Colors.blue,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 0),
-                          child: Container(
+                    InkWell(
+                      onTap: () {
+                        Get.to(haveyouever());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
                             margin: EdgeInsets.all(10),
                             height: height * 0.14,
                             width: width * 0.3,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        "assets/images/Group 1298.png"),
+                                        "assets/images/Group 1280.png"),
                                     fit: BoxFit.fill)),
                             //color: Colors.blue,
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15),
+                            child: Container(
+                              margin: EdgeInsets.all(10),
+                              height: height * 0.15,
+                              width: width * 0.28,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/Group 1281.png"),
+                                      fit: BoxFit.fill)),
+                              //color: Colors.blue,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          height: height * 0.14,
-                          width: width * 0.3,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/Group 1299.png"),
-                                  fit: BoxFit.fill)),
-                          //color: Colors.blue,
-                        ),
-                      ],
+                    InkWell(
+                      onTap: () {
+                        Get.to(haveyouever());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            height: height * 0.14,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Group 1282.png"),
+                                    fit: BoxFit.fill)),
+                            //color: Colors.blue,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 0),
+                            child: Container(
+                              margin: EdgeInsets.all(10),
+                              height: height * 0.14,
+                              width: width * 0.3,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/Group 1298.png"),
+                                      fit: BoxFit.fill)),
+                              //color: Colors.blue,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.to(haveyouever());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            height: height * 0.14,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Group 1299.png"),
+                                    fit: BoxFit.fill)),
+                            //color: Colors.blue,
+                          ),
+                        ],
+                      ),
                     ),
 
                     Padding(

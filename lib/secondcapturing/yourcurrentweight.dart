@@ -1,3 +1,4 @@
+import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/targetweight.dart';
 import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
@@ -52,13 +53,7 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
                           Center(
                             child: Text(
                               'Your Current Weight ?',
-                              style: GoogleFonts.lato(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayMedium,
-                                  fontSize: 25,
-                                  fontStyle: FontStyle.normal,
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.bold),
+                              style: titlecustomTextStyle(),
                             ),
                           )
                         ],
@@ -66,19 +61,24 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 50),
+                      padding: EdgeInsets.only(top: height * 0.23),
                       child: Column(
                         children: <Widget>[
                           Container(
                               // height: 200,
                               child: Center(
-                            child: Text(
-                              '65 kg',
-                              style: TextStyle(
-                                  fontSize: 40,
-                                  color: Color.fromARGB(255, 19, 118, 22),
-                                  decoration: TextDecoration.underline,
-                                  fontWeight: FontWeight.w700),
+                            child: TextField(
+                              style: TextStyle(height: 2.5),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: '65 kg',
+                                hintStyle: TextStyle(
+                                    fontSize: 40,
+                                    color: Color.fromARGB(255, 19, 118, 22),
+                                    decoration: TextDecoration.underline,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              textAlign: TextAlign.center,
                             ),
                           )),
                           Container(
@@ -128,8 +128,8 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
 
                     //
                     Padding(
-                      padding:
-                          const EdgeInsets.only(top: 280, left: 20, right: 20),
+                      padding: EdgeInsets.only(
+                          top: height * 0.2, left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
                           Get.to(targetweight());

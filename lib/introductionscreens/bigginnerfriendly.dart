@@ -12,6 +12,7 @@ class beginnerfriendly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -28,14 +29,11 @@ class beginnerfriendly extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: 20,
-                    ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                        top: 50,
+                      padding: EdgeInsets.only(
+                        top: height * 0.05,
                         left: 20,
-                        right: 20,
+                        right: height * 0.05,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +49,7 @@ class beginnerfriendly extends StatelessWidget {
                     //login screen header
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      height: 250,
+                      height: height * 0.3,
                       child: Image.asset(
                         "assets/images/Group 1205.png",
                       ),
@@ -84,8 +82,8 @@ class beginnerfriendly extends StatelessWidget {
                         Get.to(tellusyourgoal());
                       },
                       child: Padding(
-                        padding:
-                            const EdgeInsets.only(top: 60, left: 20, right: 20),
+                        padding: EdgeInsets.only(
+                            top: height * 0.16, left: 20, right: 20),
                         child: Container(
                           width: 240,
                           decoration: BoxDecoration(
@@ -139,7 +137,7 @@ class beginnerfriendly extends StatelessWidget {
                               horizontal: 28,
                             ),
                             child: Text(
-                              "already have an acount?",
+                              "Already have an account?",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 17, 108, 20),
                                 fontSize: 20,

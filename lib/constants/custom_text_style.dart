@@ -30,7 +30,7 @@ TextStyle midlecustomTextStyle({
 TextStyle titlecustomTextStyle({
   Color? color,
   FontWeight weight = FontWeight.w900,
-  double fontSize = 35,
+  double fontSize = 25,
   FontStyle fontStyle = FontStyle.italic,
   String? fontFamily,
 }) {
