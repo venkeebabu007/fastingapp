@@ -1,23 +1,17 @@
-import 'package:fastingapp/constants/custom_text_style.dart';
-import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
-import 'package:fastingapp/secondcapturing/yourcurrentweight.dart';
-
+/*import 'package:fastingapp/constants/custom_text_style.dart';
+import 'package:fastingapp/secondcapturing/atwhattime.dart';
+import 'package:fastingapp/userdetailscapturingscreens/haveyouever.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:numberpicker/numberpicker.dart';
 
-class whatisyourheight extends StatefulWidget {
-  const whatisyourheight({super.key});
+import 'whatisyouname_screen.dart';
 
-  @override
-  State<whatisyourheight> createState() => _whatisyourheightState();
-}
+class mainwhatsuractivity extends StatelessWidget {
+  const mainwhatsuractivity({super.key});
 
-class _whatisyourheightState extends State<whatisyourheight> {
-  int _currentValue = 3;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -51,88 +45,95 @@ class _whatisyourheightState extends State<whatisyourheight> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: Text(
-                              'What is your height?',
-                              style: titlecustomTextStyle(),
-                            ),
+                            child: Text('What\'s your activity level?',
+                                style: titlecustomTextStyle()),
                           )
                         ],
                       ),
                     ),
-
-                    Padding(
-                      padding: EdgeInsets.only(top: height * 0.26),
-                      child: Column(
-                        children: <Widget>[
+                    InkWell(
+                      onTap: () {
+                        Get.to(atwhattime());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
                           Container(
-                              // height: 200,
-                              child: Center(
-                            child: TextField(
-                              style: TextStyle(height: 2.5),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: '180 cm',
-                                hintStyle: TextStyle(
-                                    fontSize: 40,
-                                    color: Color.fromARGB(255, 19, 118, 22),
-                                    decoration: TextDecoration.underline,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          )),
-                          Container(
-                            height: 35,
-                            width: 160,
+                            margin: EdgeInsets.all(10),
+                            height: height * 0.17,
+                            width: width * 0.35,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                border: Border.all(color: Colors.green)),
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: 50,
-                                  width: 75,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: Colors.green,
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      'cm',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height: 50,
-                                  width: 75,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: Colors.white,
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      'ft',
-                                      style: TextStyle(
-                                          color: Colors.green, fontSize: 18),
-                                    ),
-                                  ),
-                                )
-                              ],
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Group 3019.png"),
+                                    fit: BoxFit.fill)),
+                            //color: Colors.blue,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 0),
+                            child: Container(
+                              margin: EdgeInsets.all(10),
+                              height: height * 0.17,
+                              width: width * 0.35,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/Group 3020.png"),
+                                      fit: BoxFit.fill)),
+                              //color: Colors.blue,
                             ),
-                          )
+                          ),
+                        ],
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.to(atwhattime());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            height: height * 0.17,
+                            width: width * 0.35,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Group 3066.png"),
+                                    fit: BoxFit.fill)),
+                            //color: Colors.blue,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 0),
+                            child: Container(
+                              margin: EdgeInsets.all(10),
+                              height: height * 0.17,
+                              width: width * 0.35,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/Group 3067.png"),
+                                      fit: BoxFit.fill)),
+                              //color: Colors.blue,
+                            ),
+                          ),
                         ],
                       ),
                     ),
 
-                    //
                     Padding(
-                      padding: EdgeInsets.only(
-                          top: height * 0.2, left: 20, right: 20),
+                      padding:
+                          const EdgeInsets.only(top: 180, left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
-                          Get.to(yourcurrentweight());
+                          Get.to(atwhattime());
                         },
                         child: Container(
                           width: 240,
@@ -159,7 +160,6 @@ class _whatisyourheightState extends State<whatisyourheight> {
                         ),
                       ),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: Container(
@@ -172,11 +172,11 @@ class _whatisyourheightState extends State<whatisyourheight> {
                         // Border.all(color: Colors.green, width: 4),
                         child: InkWell(
                           /* onTap: () {
-                                            if (formKey.currentState!
-                                                .validate()) {
-                                            //  loginUserNow();
-                                            }
-                                          },*/
+                                              if (formKey.currentState!
+                                                  .validate()) {
+                                              //  loginUserNow();
+                                              }
+                                            },*/
                           borderRadius: BorderRadius.circular(30),
                           customBorder:
                               Border.all(color: Colors.green, width: 4),
@@ -206,3 +206,4 @@ class _whatisyourheightState extends State<whatisyourheight> {
     );
   }
 }
+*/

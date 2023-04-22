@@ -1,12 +1,13 @@
 import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondsliderscreens/main_whatsyouractivity.dart';
-import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'whatis _youractivitylevel.dart';
 import 'whatisyouname_screen.dart';
 
 class haveyouever extends StatelessWidget {

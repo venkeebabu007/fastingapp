@@ -1,18 +1,9 @@
 import 'package:fastingapp/introductionscreens/bigginnerfriendly.dart';
-import 'package:fastingapp/introductionscreens/discover_screen.dart';
 import 'package:fastingapp/introductionscreens/effectivel_safe_screen.dart';
 import 'package:fastingapp/introductionscreens/natural_healthy_screen.dart';
 import 'package:fastingapp/introductionscreens/nodiet.dart';
-import 'package:fastingapp/introductionscreens/real_success_stories.dart';
-import 'package:fastingapp/introductionscreens/scientifically_screen.dart';
-import 'package:fastingapp/introductionscreens/trackyour_screen.dart';
-import 'package:fastingapp/introductionscreens/your_personal.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class listofintroductionscreens extends StatelessWidget {
   // const listofintroductionscreens({super.key});

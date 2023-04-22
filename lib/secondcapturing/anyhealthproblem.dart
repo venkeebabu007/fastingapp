@@ -2,7 +2,7 @@ import 'package:fastingapp/constants/custom_text_style.dart';
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/wearemakingyourplan.dart';
 import 'package:fastingapp/secondcapturing/whatisyourmealtime.dart';
-import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

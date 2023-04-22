@@ -1,4 +1,5 @@
 import 'package:fastingapp/constants/custom_text_style.dart';
+import 'package:fastingapp/secondcapturing/yourexclusive.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -27,75 +28,80 @@ class wearemakingyourplan extends StatelessWidget {
                 minHeight: cons.maxHeight,
               ),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 50,
-                        left: 20,
-                        right: 20,
-                        bottom: 50,
+                child: InkWell(
+                  onTap: () {
+                    Get.to(yourexlcusive());
+                  },
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'We are making your plan',
-                              style: titlecustomTextStyle(),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-
-                    //login screen header
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      height: height * 0.5,
-                      child: Image.asset(
-                        "assets/images/Group 1572.png",
-                      ),
-                    ),
-
-                    InkWell(
-                      onTap: () {
-                        //  Get.to(wearemakingyourplantwo());
-                      },
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(top: 60, left: 20, right: 20),
-                        child: Container(
-                          width: 240,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Color.fromARGB(255, 17, 108, 20),
-                              Colors.green,
-                              Color.fromARGB(255, 17, 108, 20),
-                            ]),
-                            //color: Colors.transparent,
-
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 50,
+                          left: 20,
+                          right: 20,
+                          bottom: 50,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
                               child: Text(
-                                "Next",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
+                                'We are making your plan',
+                                style: titlecustomTextStyle(),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      //login screen header
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: height * 0.5,
+                        child: Image.asset(
+                          "assets/images/Group 1572.png",
+                        ),
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          Get.to(yourexlcusive());
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 60, left: 20, right: 20),
+                          child: Container(
+                            width: 240,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color.fromARGB(255, 17, 108, 20),
+                                Colors.green,
+                                Color.fromARGB(255, 17, 108, 20),
+                              ]),
+                              //color: Colors.transparent,
+
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  "Next",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );

@@ -1,6 +1,6 @@
 import 'package:fastingapp/secondcapturing/hownayhourssleep.dart';
 import 'package:fastingapp/secondcapturing/howoldareyou.dart';
-import 'package:fastingapp/secondsliderscreens/whatisyouractivitylevel.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
