@@ -1,4 +1,8 @@
 import 'package:fastingapp/constants/custom_text_style.dart';
+import 'package:fastingapp/signinpages/socialacs.dart';
+import 'package:fastingapp/testingfiles/forteen_ending_plan.dart';
+import 'package:fastingapp/testingfiles/togledependent_textform.dart';
+import 'package:fastingapp/testingfiles/whatisyourheight.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +83,8 @@ class naturalandhelthy extends StatelessWidget {
 
                     InkWell(
                       onTap: () {
-                        Get.to(tellusyourgoal());
+                        //  Get.to(socialacs());
+                        Get.to(WhatisYourHeightPage());
                       },
                       child: Padding(
                         padding: EdgeInsets.only(

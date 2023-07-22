@@ -46,7 +46,7 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
 
                     Padding(
                       padding: const EdgeInsets.only(
-                          top: 50, left: 20, right: 20, bottom: 50),
+                          top: 25, left: 20, right: 20, bottom: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -59,9 +59,34 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: width * 0.15, right: width * 0.1),
+                      child: Container(
+                          height: 350,
+                          width: 200,
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  height: 290,
+                                  child: Image(
+                                    image: AssetImage(
+                                        "assets/images/Group 1361.png"),
+                                  ),
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/images/Group 1363.png"),
+                              ),
+                            ],
+                          )),
+                    ),
 
                     Padding(
-                      padding: EdgeInsets.only(top: height * 0.23),
+                      padding: EdgeInsets.only(top: height * 0.01),
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -129,7 +154,7 @@ class _yourcurrentweightState extends State<yourcurrentweight> {
                     //
                     Padding(
                       padding: EdgeInsets.only(
-                          top: height * 0.2, left: 20, right: 20),
+                          top: height * 0.02, left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
                           Get.to(targetweight());

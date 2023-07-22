@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'whatis _youractivitylevel.dart';
-import 'whatisyouname_screen.dart';
 
 class haveyouever extends StatelessWidget {
   const haveyouever({super.key});
@@ -45,124 +44,129 @@ class haveyouever extends StatelessWidget {
 
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 50, left: 5, right: 5, bottom: 50),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                'Have you ever Practiced\nintermittent fasting before ?',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 6, 119, 10),
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 22,
-                                  fontStyle: FontStyle.italic,
-                                  fontFamily: 'Segoe UI Italic',
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 50, bottom: 20),
-                            child: Container(
-                              width: 320,
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.green, width: 2),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 10,
-                                  horizontal: 28,
-                                ),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Text(
-                                      "This is my first time",
-                                      style: TextStyle(
-                                          color: Colors.green,
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.italic),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                            top: 50, left: 15, right: 15, bottom: 30),
+                        child: Expanded(
+                            //  mainAxisAlignment: MainAxisAlignment.center,
+                            child: Center(
+                          child: Text(
+                            'Have you ever Practiced\nintermittent fasting before ?',
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 6, 119, 10),
+                              fontWeight: FontWeight.w900,
+                              fontSize: height * 0.03,
+                              fontStyle: FontStyle.italic,
+                              fontFamily: 'Segoe UI Italic',
                             ),
+                            textAlign: TextAlign.center,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5, bottom: 20),
-                            child: Container(
-                              width: 320,
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.green, width: 2),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 10,
-                                  horizontal: 28,
-                                ),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Text(
-                                      "I have tried occasionally",
-                                      style: TextStyle(
-                                        color: Colors.green,
-                                        fontSize: 20,
-                                        fontStyle: FontStyle.italic,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5, bottom: 20),
-                            child: Container(
-                              width: 320,
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(color: Colors.green, width: 2),
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 10,
-                                  horizontal: 2,
-                                ),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Text(
-                                      "Fasting has become my way of life",
-                                      style: TextStyle(
-                                          color: Colors.green,
-                                          fontSize: 18,
-                                          fontStyle: FontStyle.italic),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                        )),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                            top: 180, left: 20, right: 20),
+                        padding: const EdgeInsets.all(10.0),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 50, bottom: 20),
+                                child: Container(
+                                  width: 320,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.green, width: 2),
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: 28,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "This is my first time",
+                                          style: TextStyle(
+                                              color: Colors.green,
+                                              fontSize: height * 0.025,
+                                              fontStyle: FontStyle.italic),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 5, bottom: 20),
+                                child: Container(
+                                  width: 320,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.green, width: 2),
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: 28,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "I have tried occasionally",
+                                          style: TextStyle(
+                                            color: Colors.green,
+                                            fontSize: height * 0.025,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 5, bottom: 20),
+                                child: Container(
+                                  width: 320,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.green, width: 2),
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: 2,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "Fasting has become my way of life",
+                                          style: TextStyle(
+                                              color: Colors.green,
+                                              fontSize: height * 0.023,
+                                              fontStyle: FontStyle.italic),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: height * 0.12, left: 20, right: 20),
                         child: InkWell(
                           onTap: () {
                             Get.to(mainwhatsuractivity());

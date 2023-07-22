@@ -1,4 +1,5 @@
 import 'package:fastingapp/constants/custom_text_style.dart';
+import 'package:fastingapp/signinpages/socialacs.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,7 @@ class beginnerfriendly extends StatelessWidget {
 
                     InkWell(
                       onTap: () {
-                        Get.to(tellusyourgoal());
+                        Get.to(socialacs());
                       },
                       child: Padding(
                         padding: EdgeInsets.only(

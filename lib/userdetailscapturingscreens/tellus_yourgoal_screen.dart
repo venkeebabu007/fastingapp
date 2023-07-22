@@ -6,8 +6,6 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'whatisyouname_screen.dart';
-
 class tellusyourgoal extends StatelessWidget {
   const tellusyourgoal({super.key});
 

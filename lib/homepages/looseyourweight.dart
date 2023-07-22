@@ -6,37 +6,8 @@ import 'package:fastingapp/utils/customcontainer_loosew.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class looseyourweight extends StatefulWidget {
+class looseyourweight extends StatelessWidget {
   const looseyourweight({super.key});
-
-  @override
-  State<looseyourweight> createState() => _looseyourweightState();
-}
-
-class _looseyourweightState extends State<looseyourweight> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +61,7 @@ class _looseyourweightState extends State<looseyourweight> {
                       InkWell(
                         onTap: () => Get.to(forteenplan()),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          padding: const EdgeInsets.only(left: 5, right: 5),
                           child: CustomContainerlooseweight(
                             color: Color.fromARGB(255, 236, 237, 220),
                             borderColor: Colors.green,
@@ -105,8 +76,8 @@ class _looseyourweightState extends State<looseyourweight> {
                       InkWell(
                         onTap: () => Get.to(sixteenplan()),
                         child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 20, right: 20),
+                          padding:
+                              const EdgeInsets.only(top: 8, left: 5, right: 5),
                           child: CustomContainerlooseweight(
                             color: Color.fromARGB(255, 204, 232, 234),
                             borderColor: Color.fromARGB(255, 161, 122, 245),
@@ -121,8 +92,8 @@ class _looseyourweightState extends State<looseyourweight> {
                       InkWell(
                         onTap: () => Get.to(eighteenplan()),
                         child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 20, right: 20),
+                          padding:
+                              const EdgeInsets.only(top: 8, left: 5, right: 5),
                           child: CustomContainerlooseweight(
                             color: Color.fromARGB(255, 200, 201, 183),
                             borderColor: Colors.green,
@@ -137,7 +108,7 @@ class _looseyourweightState extends State<looseyourweight> {
 
                       Padding(
                         padding:
-                            const EdgeInsets.only(top: 10, left: 20, right: 20),
+                            const EdgeInsets.only(top: 8, left: 5, right: 5),
                         child: CustomContainerlooseweight(
                           color: Color.fromARGB(255, 182, 235, 190),
                           borderColor: Colors.green,
@@ -154,33 +125,6 @@ class _looseyourweightState extends State<looseyourweight> {
               ),
             );
           },
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Colors.red,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
-              backgroundColor: Colors.green,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
-              backgroundColor: Colors.purple,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-              backgroundColor: Colors.pink,
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
         ),
       ),
     );

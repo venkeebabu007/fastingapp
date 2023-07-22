@@ -46,7 +46,7 @@ class _targetweightState extends State<targetweight> {
 
                     Padding(
                       padding: const EdgeInsets.only(
-                          top: 50, left: 20, right: 20, bottom: 50),
+                          top: 25, left: 20, right: 20, bottom: 30),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -61,7 +61,33 @@ class _targetweightState extends State<targetweight> {
                     ),
 
                     Padding(
-                      padding: EdgeInsets.only(top: height * 0.23),
+                      padding: EdgeInsets.only(
+                          left: width * 0.15, right: width * 0.1),
+                      child: Container(
+                          height: 350,
+                          width: 200,
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  height: 290,
+                                  child: Image(
+                                    image: AssetImage(
+                                        "assets/images/Group 1361.png"),
+                                  ),
+                                ),
+                              ),
+                              Image(
+                                image:
+                                    AssetImage("assets/images/Group 1363.png"),
+                              ),
+                            ],
+                          )),
+                    ),
+
+                    Padding(
+                      padding: EdgeInsets.only(top: height * 0.01),
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -73,7 +99,7 @@ class _targetweightState extends State<targetweight> {
                                 border: InputBorder.none,
                                 hintText: '58 kg',
                                 hintStyle: TextStyle(
-                                    fontSize: 40,
+                                    fontSize: 30,
                                     color: Color.fromARGB(255, 19, 118, 22),
                                     decoration: TextDecoration.underline,
                                     fontWeight: FontWeight.w700),
@@ -129,7 +155,7 @@ class _targetweightState extends State<targetweight> {
                     //
                     Padding(
                       padding: EdgeInsets.only(
-                          top: height * 00.2, left: 20, right: 20),
+                          top: height * 00.02, left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
                           Get.to(howearlyyouwant());

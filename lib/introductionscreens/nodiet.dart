@@ -1,3 +1,5 @@
+import 'package:fastingapp/signinpages/socialacs.dart';
+import 'package:fastingapp/testingfiles/cmtofeetconvertion.dart';
 import 'package:fastingapp/userdetailscapturingscreens/contnue_screen.dart';
 import 'package:fastingapp/userdetailscapturingscreens/tellus_yourgoal_screen.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +87,8 @@ class nodietscreen extends StatelessWidget {
 
                     InkWell(
                       onTap: () {
-                        Get.to(tellusyourgoal());
+                        Get.to(socialacs());
+                        // Get.to(cmtofeet());
                       },
                       child: Padding(
                         padding: EdgeInsets.only(

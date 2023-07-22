@@ -1,4 +1,6 @@
 import 'package:fastingapp/constants/custom_text_style.dart';
+import 'package:fastingapp/homepages/eighteen.dart';
+import 'package:fastingapp/homepages/eightypercent.dart';
 import 'package:fastingapp/homepages/looseyourweight.dart';
 
 import 'package:flutter/material.dart';
@@ -17,7 +19,22 @@ class yourexlcusive extends StatefulWidget {
 }
 
 class _yourexlcusiveState extends State<yourexlcusive> {
-  List<SalesData>? _chartData;
+  final today = DateTime.now();
+
+  String nexmonthname = DateFormat('MMMM')
+      .format(DateTime.now().add(const Duration(days: 30)))
+      .toString();
+  String secomonthname = DateFormat('MMMM')
+      .format(DateTime.now().add(const Duration(days: 60)))
+      .toString();
+
+  String thirdmonthname = DateFormat('MMMM')
+      .format(DateTime.now().add(const Duration(days: 90)))
+      .toString();
+
+  String _month = DateFormat('MMMM').format(new DateTime.now()).toString();
+
+  List<_WeightData>? _chartData;
   TooltipBehavior? _tooltipBehavior;
 
   @override
@@ -25,6 +42,9 @@ class _yourexlcusiveState extends State<yourexlcusive> {
     _chartData = getChartData();
     _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
+    print(_month);
+    print(nexmonthname);
+    print(thirdmonthname);
   }
 
   @override
@@ -46,7 +66,7 @@ class _yourexlcusiveState extends State<yourexlcusive> {
               ),
               child: SingleChildScrollView(
                 child: InkWell(
-                  onTap: () => Get.to(looseyourweight()),
+                  onTap: () => Get.to(eightypercent()),
                   child: Column(
                     children: [
                       SizedBox(
@@ -191,28 +211,46 @@ class _yourexlcusiveState extends State<yourexlcusive> {
                         ),
                       ),
                       SizedBox(
-                        height: height * 0.33,
+                        // height: height * 0.33,
                         child: SfCartesianChart(
-                          //title: ChartTitle(text: 'Yearly sales analysis'),
+                          //title: ChartTitle(text: 'Yearly Weight analysis'),
                           //  legend: Legend(isVisible: true),
+                          primaryXAxis: CategoryAxis(
+                            labelAlignment: LabelAlignment.start,
+                            maximumLabels: 5,
+                            labelStyle: TextStyle(fontSize: 8),
+                            axisLine: AxisLine(
+                              width: 5,
+                              color: Colors.blue,
+                            ),
+                          ),
+
                           tooltipBehavior: _tooltipBehavior,
-                          series: <ChartSeries>[
-                            LineSeries<SalesData, double>(
+                          series: <ChartSeries<_WeightData, String>>[
+                            LineSeries<_WeightData, String>(
                                 name: 'weihgt',
                                 dataSource: _chartData!,
-                                xValueMapper: (SalesData sales, _) =>
-                                    sales.year,
-                                yValueMapper: (SalesData sales, _) =>
-                                    sales.sales,
+                                xValueMapper: (_WeightData Weight, _) =>
+                                    Weight.month,
+                                yValueMapper: (_WeightData Weight, _) =>
+                                    Weight.Weight,
+
+                                // xValueMapper: (WeightData Weight, _) =>
+                                //  Weight.month,
+                                //  yValueMapper: (WeightData Weight, _) =>
+                                //   Weight.Weight,
                                 dataLabelSettings:
                                     DataLabelSettings(isVisible: true),
                                 enableTooltip: true)
                           ],
-                          primaryXAxis: NumericAxis(
+                          /* primaryXAxis: NumericAxis(
                             edgeLabelPlacement: EdgeLabelPlacement.shift,
-                          ),
+                          ),*/
                           primaryYAxis: NumericAxis(
+                            axisLine: AxisLine(width: 4, color: Colors.blue),
+
                             labelFormat: '{value}kg',
+                            minimum: 5,
                             // numberFormat:
                             // NumberFormat.simpleCurrency(decimalDigits: 0)
                           ),
@@ -220,7 +258,7 @@ class _yourexlcusiveState extends State<yourexlcusive> {
                       ),
 
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: width * 0.13),
+                        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                         child: Container(
                           child: Column(
                             children: [
@@ -240,9 +278,6 @@ class _yourexlcusiveState extends State<yourexlcusive> {
                                         color: Colors.green,
                                         fontWeight: FontWeight.w900,
                                         fontSize: 17),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
                                   ),
                                 ],
                               ),
@@ -415,20 +450,25 @@ class _yourexlcusiveState extends State<yourexlcusive> {
     );
   }
 
-  List<SalesData> getChartData() {
-    final List<SalesData> chartData = [
-      SalesData(01, 65),
-      SalesData(02, 63),
-      SalesData(03, 62),
-      SalesData(04, 60),
-      SalesData(05, 58)
+  List<_WeightData> getChartData() {
+    final List<_WeightData> chartData = [
+      _WeightData(_month, 75),
+      _WeightData(nexmonthname, 68),
+      _WeightData(secomonthname, 64),
+      _WeightData(thirdmonthname, 60),
     ];
     return chartData;
   }
 }
 
-class SalesData {
-  SalesData(this.year, this.sales);
-  final double year;
-  final double sales;
+/*class WeightData {
+  WeightData(this.month, this.Weight);
+  final double month;
+  final double Weight;
+}*/
+class _WeightData {
+  _WeightData(this.month, this.Weight);
+
+  final String month;
+  final double Weight;
 }
